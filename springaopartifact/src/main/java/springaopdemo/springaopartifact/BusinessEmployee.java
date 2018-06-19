@@ -5,6 +5,17 @@ public class BusinessEmployee {
 	private String accountHolderName;
 	
 	private String iban;
+	
+	private String accountNumber;
+	
+
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
 
 	public String getAccountHolderName() {
 		return accountHolderName;
