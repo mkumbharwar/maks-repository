@@ -15,17 +15,21 @@ package com.mak.features;
 public class TestLambdaExpression {
 
 	public static void main(String[] args) {
-
-		FirstFunctionalInterface s = (name) -> {
-			return name + " Testing labda expression!!";
+		// single parameter
+		FirstFunctionalInterface s = name1 -> {
+			return name1 + " Testing labda expression!!";
 		};
 		System.out.println(s.workTodo("Mahesh"));
-		
-		FirstFunctionalInterface sAnonymous =new FirstFunctionalInterface() {
-			
+
+		// two parameters
+		SecondInterface secondInterface = (c, d) -> (c + d);
+		System.out.println(secondInterface.getSum(24, 98));
+
+		FirstFunctionalInterface sAnonymous = new FirstFunctionalInterface() {
+
 			@Override
 			public String workTodo(String name) {
-				return name+" Anonymous testing!!!";
+				return name + " Anonymous testing!!!";
 			}
 		};
 		System.out.println(sAnonymous.workTodo("Bamman"));
