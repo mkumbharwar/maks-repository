@@ -10,6 +10,8 @@ public class BusinessApplicationContext {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("test-context.xml");
 		BusinessEmployee businessEmployee = (BusinessEmployee) applicationContext.getBean("businessEmployee");
 		businessEmployee.setAccountHolderName("Mahesh");
-		System.out.println(businessEmployee.getAccountHolderName());
+		businessEmployee.setAccountNumber("123456");
+		System.out.println("account holder name===>"+businessEmployee.getAccountHolderName());
+		System.out.println("acc number in appContext===>"+businessEmployee.getAccountNumber());
 	}
 }
